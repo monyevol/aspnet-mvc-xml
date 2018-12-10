@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Bill Payment Details";
+}
+
+<div class="push-down">
+    <h2>Bill Payment Details</h2>
+</div>
+
+<hr />
+
+<div class="containment">
+    <dl class="dl-horizontal common-font caption">
+        <dt class="bold">Payment ID</dt>
+        <dd>@ViewBag.PaymentID</dd>
+        <dt>Receipt #</dt>
+        <dd>@ViewBag.ReceiptNumber</dd>
+        <dt>Water Bill ID</dt>
+        <dd>@ViewBag.WaterBillID</dd>
+        <dt>Payment Date</dt>
+        <dd>@ViewBag.PaymentDate</dd>
+        <dt>Payment Amount:</dt>
+        <dd>@ViewBag.PaymentAmount</dd>
+    </dl>
+</div>
+
+<p class="text-center">
+    @Html.ActionLink("Edit/Update Bill Payment Details", "Edit",
+                     new { id = @ViewBag.PaymentID }, htmlAttributes: new { @class = "water-nav" }) <span style="color: aquamarine">::</span>
+    @Html.ActionLink("Water Bills Payments", "Index",
+                     null, new { @class = "water-nav" })
+</p>

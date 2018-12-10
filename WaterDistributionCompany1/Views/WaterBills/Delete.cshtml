@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Deleting Water Bill";
+}
+
+<div class="push-down">
+    <h2>Cancel Water Bill</h2>
+</div>
+
+<hr />
+
+<div class="containment">
+    <dl class="dl-horizontal common-font caption">
+        <dt class="bold">Water Bill ID:</dt>
+        <dd>@ViewBag.WaterBillID</dd>
+        <dt class="bold">Invoice #:</dt>
+        <dd>@ViewBag.InvoiceNumber</dd>
+        <dt class="bold">Account #:</dt>
+        <dd>@ViewBag.AccountNumber</dd>
+        <dt class="bold">Meter Reading Start Date:</dt>
+        <dd>@ViewBag.MeterReadingStartDate</dd>
+        <dt class="bold">Meter Reading End Date:</dt>
+        <dd>@ViewBag.MeterReadingEndDate</dd>
+        <dt class="bold">Billing Days:</dt>
+        <dd>@ViewBag.BillingDays</dd>
+        <dt class="bold">Counter Reading Start:</dt>
+        <dd>@ViewBag.CounterReadingStart</dd>
+        <dt class="bold">Counter Reading End:</dt>
+        <dd>@ViewBag.CounterReadingEnd</dd>
+        <dt class="bold">Total HCF:</dt>
+        <dd>@ViewBag.TotalHCF</dd>
+        <dt class="bold">Total Gallons:</dt>
+        <dd>@ViewBag.TotalGallons</dd>
+        <dt class="bold">First 15 HCF:</dt>
+        <dd>@ViewBag.First15HCF</dd>
+        <dt class="bold">Next 10 HCF:</dt>
+        <dd>@ViewBag.Next10HCF</dd>
+        <dt class="bold">Remaining HCF:</dt>
+        <dd>@ViewBag.RemainingHCF</dd>
+        <dt class="bold">Sewer Charges:</dt>
+        <dd>@ViewBag.SewerCharges</dd>
+        <dt class="bold">Storm Charges:</dt>
+        <dd>@ViewBag.StormCharges</dd>
+        <dt class="bold">Water Usage Charges:</dt>
+        <dd>@ViewBag.WaterUsageCharges</dd>
+        <dt class="bold">Total Charges:</dt>
+        <dd>@ViewBag.TotalCharges</dd>
+        <dt class="bold">Local Taxes:</dt>
+        <dd>@ViewBag.LocalTaxes</dd>
+        <dt class="bold">State Taxes:</dt>
+        <dd>@ViewBag.State Taxes</dd>
+        <dt class="bold">Payment Due Date:</dt>
+        <dd>@ViewBag.PaymentDueDate</dd>
+        <dt class="bold">Amount Due:</dt>
+        <dd>@ViewBag.AmountDue</dd>
+        <dt class="bold">Late Payment Due Date:</dt>
+        <dd>@ViewBag.LatePaymentDueDate</dd>
+        <dt class="bold">Late Amount Due:</dt>
+        <dd>@ViewBag.LateAmountDue</dd>
+    </dl>
+
+    <h3 class="common-font caption">Are you sure you want to cancel this water bill (if you do, the bill will disappear from the system)?</h3>
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-actions no-color">
+            <input type="submit" value="Cancel this Water Bill" class="btn btn-primary" /> |
+            @Html.ActionLink("Customers Water Bills", "Index", null, new { @class = "water-nav" })
+        </div>
+    }
+</div>
